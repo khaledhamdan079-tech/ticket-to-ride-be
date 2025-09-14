@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+import os
 from datetime import datetime, timezone
 
 # Create FastAPI app
@@ -32,4 +33,5 @@ async def test_endpoint():
     return {"message": "API is working", "timestamp": datetime.now(timezone.utc)}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port, log_level="info")
