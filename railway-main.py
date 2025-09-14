@@ -11,6 +11,13 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# Startup event
+@app.on_event("startup")
+async def startup_event():
+    print("🎮 Ticket to Ride Backend API is starting up...")
+    print(f"⏰ Started at: {datetime.now(timezone.utc)}")
+    print("✅ API is ready to accept requests!")
+
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
