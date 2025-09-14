@@ -2,6 +2,15 @@
 
 A FastAPI backend for the Ticket to Ride multiplayer game, designed to work with the Flutter frontend application.
 
+## 🚀 Live Application
+
+**Production URL:** https://web-production-ec3e.up.railway.app
+
+- **API Documentation:** https://web-production-ec3e.up.railway.app/docs
+- **Health Check:** https://web-production-ec3e.up.railway.app/health
+- **Database:** PostgreSQL (Railway)
+- **Status:** ✅ Live and operational
+
 ## Features
 
 - **Game Management**: Create, join, and manage multiplayer games
